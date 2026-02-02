@@ -1,12 +1,12 @@
-## **Taller 0 - Estructuras de Datos**
-### Luis Esteban Chaustre Garzon
-### Profesor: Ing. Santiago 'Primo Chaustre
+## **Taller 0 - Estructuras de Datos** ⭐ ✨
+### Luis Esteban Chaustre Garzon 🚀
+### Profesor: Ing. Santiago 'Primo' Chaustre 📝
 
 En este taller introductorio a la asignatura de Estructuras de Datos, se refrescan algunos conceptos vistos en la asignatura de Programación Avanzada en el lenguaje C++, los cuales se trataron de manejar de la mejor forma posible en base a lo que se recordaba, con una novedad que es: la compilación en terminal, en vez de en un IDE, como lo veníamos haciendo en semestres anteriores.
 
 ---
 
-### *Comandos para compilar*
+### *Comandos para compilar* 🧠 🛠️ 
 
 En orden de compilar un programa en C++ a través de la terminal se deben poder ejecutar ciertos comandos que requieren de extensiones como g++.
 
@@ -28,9 +28,9 @@ Después de esto ya se pueden realizar las funciones del programa por medio del 
 
 ---
 
-### Plan de pruebas
+### Plan de pruebas ✅ ❌ ⚠️
 
-- *init*
+- *init* ▶️
   
   Como primer paso para comprobar el funcionamiento adecuado del comando init, vamos a crear un nuevo archivo con nombre <bitacora.bd> con el comando:
 
@@ -49,7 +49,7 @@ Después de esto ya se pueden realizar las funciones del programa por medio del 
 
   *ERROR: No se pudo crear el archivo*
 
-- *add*
+- *add* 📂
   
   Para ingresar un nuevo registro al archivo que escojamos se utilizará el comando add. Un ejemplo de registro válido es:
 
@@ -85,7 +85,7 @@ Después de esto ya se pueden realizar las funciones del programa por medio del 
 
   Se informa de una situación anormal en el ingreso de ese valor.
 
-- *list*
+- *list* 📄
   
   El comando list se utiliza para mostrar en la terminal todos los registros que existen en un archivo.
 
@@ -108,7 +108,7 @@ Después de esto ya se pueden realizar las funciones del programa por medio del 
 
   *BD corrupta o formato inválido*
 
-- *find*
+- *find* 🔍
   
   El comando find se encarga de buscar un registro por nombre. A modo de prueba seguiremos trabajado en el archivo bitacora.bd, para un caso donde solo existe un registro, usando el comando:
 
@@ -135,7 +135,7 @@ Después de esto ya se pueden realizar las funciones del programa por medio del 
   *Encontrado:*  
   *Ana | Feliz | F=85 E=70 | sueno=12 | aguacate= Si :)*
 
-- *stats*
+- *stats* 📊
   
   El comando stats realiza operaciones usando los valores contenidos en los registros de acuerdo con las especificaciones del taller.
 
@@ -168,5 +168,8 @@ Después de esto ya se pueden realizar las funciones del programa por medio del 
 
 ---
 
-### Evidencia de depuración
+### Evidencia de depuración 🧪🐛
+
+
+
 
