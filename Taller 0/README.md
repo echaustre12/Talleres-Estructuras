@@ -9,13 +9,17 @@ En orden de compilar un programa en c++ a traves de la terminal se deben de pode
 En mi caso especifico, trabajo desde un sistema operativo windows. Sin embargo utilizo la terminal MSYS2 UCRT64, que me permitió descargar estos requisitos con mayor facilidad.
 Para compilar el programa es necesario estar en el directorio en el que se encuentran los archivos.
 Se utiliza el comando:
+```bash
 g++ -std=c++11 -Wall -Wextra -pedantic -o bitacora main.cpp bitacora.cpp
+```
 Después de esto ya se pueden realizar las funciones del programa por medio del ejecutable ./bitacora
 
 ### *Plan de pruebas*
 - init
 Como primer paso para comprobar el funcionamiento adecuado del comando init, vamos a crear un nuevo archivo con nombre <bitacora.bd> con el comando:
-*./bitacora init bitacora.bd*
+```bash
+./bitacora init bitacora.bd
+```
 En este caso la salida esperada es: 
 *El archivo bitacora.bd fue creado con exito (N=0)*
 
