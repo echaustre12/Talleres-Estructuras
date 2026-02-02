@@ -30,7 +30,8 @@ Después de esto ya se pueden realizar las funciones del programa por medio del 
 
 ### Plan de pruebas
 
-- *init*  
+- *init*
+  
   Como primer paso para comprobar el funcionamiento adecuado del comando init, vamos a crear un nuevo archivo con nombre <bitacora.bd> con el comando:
 
   ```bash
@@ -49,6 +50,7 @@ Después de esto ya se pueden realizar las funciones del programa por medio del 
   *ERROR: No se pudo crear el archivo*
 
 - *add*
+  
   Para ingresar un nuevo registro al archivo que escojamos se utilizará el comando add. Un ejemplo de registro válido es:
 
   ```bash
@@ -84,6 +86,7 @@ Después de esto ya se pueden realizar las funciones del programa por medio del 
   Se informa de una situación anormal en el ingreso de ese valor.
 
 - *list*
+  
   El comando list se utiliza para mostrar en la terminal todos los registros que existen en un archivo.
 
   Para un archivo vacío, la salida esperada es:
@@ -106,6 +109,7 @@ Después de esto ya se pueden realizar las funciones del programa por medio del 
   *BD corrupta o formato inválido*
 
 - *find*
+  
   El comando find se encarga de buscar un registro por nombre. A modo de prueba seguiremos trabajado en el archivo bitacora.bd, para un caso donde solo existe un registro, usando el comando:
 
   ```bash
@@ -132,6 +136,7 @@ Después de esto ya se pueden realizar las funciones del programa por medio del 
   *Ana | Feliz | F=85 E=70 | sueno=12 | aguacate= Si :)*
 
 - *stats*
+  
   El comando stats realiza operaciones usando los valores contenidos en los registros de acuerdo con las especificaciones del taller.
 
   Para un archivo sin registros la salida será:
