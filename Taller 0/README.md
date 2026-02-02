@@ -1,10 +1,10 @@
-Luis Esteban Chaustre Garzon
-Taller 0 - Estructuras de Datos
-Profesor: Ing. Santiago 'Primo' Chaustre
+## **Luis Esteban Chaustre Garzon**
+## **Taller 0 - Estructuras de Datos**
+## **Profesor: Ing. Santiago 'Primo' Chaustre**
 
 En este taller introductorio a la asignatura de Estructuras de Datos, se refrescan algunos conceptos vistos en la asignatura de Programación Avanzada en el lenguaje c++, los cuales se trataron de manejar de la mejor forma posible en base a lo que se recordaba, con una novedad que es: la compilación en terminal, en vez de en un IDE, como lo veníamos haciendo en semestres anteriores.
 
-Comandos para compilar
+### *Comandos para compilar*
 En orden de compilar un programa en c++ a traves de la terminal se deben de poder ejecutar ciertos comandos que requieren de extensiones como g++.
 En mi caso especifico, trabajo desde un sistema operativo windows. Sin embargo utilizo la terminal MSYS2 UCRT64, que me permitió descargar estos requisitos con mayor facilidad.
 Para compilar el programa es necesario estar en el directorio en el que se encuentran los archivos.
@@ -12,22 +12,22 @@ Se utiliza el comando:
 g++ -std=c++11 -Wall -Wextra -pedantic -o bitacora main.cpp bitacora.cpp
 Después de esto ya se pueden realizar las funciones del programa por medio del ejecutable ./bitacora
 
-Plan de pruebas
-init
+### *Plan de pruebas*
+- init
 Como primer paso para comprobar el funcionamiento adecuado del comando init, vamos a crear un nuevo archivo con nombre <bitacora.bd> con el comando:
-./bitacora init bitacora.bd
+*./bitacora init bitacora.bd*
 En este caso la salida esperada es: 
-El archivo bitacora.bd fue creado con exito (N=0)
+*El archivo bitacora.bd fue creado con exito (N=0)*
 
 Para la comprobación de que el comando init no crea un archivo que ya existe, ni lo modifica, usaremos nuevamente el comando:
-./bitacora init bitacora.bd
+*./bitacora init bitacora.bd*
 En este caso la salida esperada es:
-El archivo bitacora.bd ya existe y no se modifico
+*El archivo bitacora.bd ya existe y no se modifico*
 
 En el caso hipotetico en el que el archivo no se pueda crear por una ruta mala o cuestión de permisos la salida esperada es:
-ERROR: No se pudo crear el archivo
+*ERROR: No se pudo crear el archivo*
 
-add
+- add
 Para ingresar un nuevo registro al archivo que escojamos se utilizara el comando add, en este caso, un ejemplo de registro valido es:
 ./bitacora add bitacora.bd --nombre "Ana" --emocion Feliz --felicidad 85 --energia 70 --sueno 12 --aguacate S
 En este caso la salida sera:
