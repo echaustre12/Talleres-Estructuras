@@ -1,6 +1,6 @@
-## **Luis Esteban Chaustre Garzon**
 ## **Taller 0 - Estructuras de Datos**
-## **Profesor: Ing. Santiago 'Primo' Chaustre**
+### **Luis Esteban Chaustre Garzon**
+### **Profesor: Ing. Santiago 'Primo' Chaustre**
 
 En este taller introductorio a la asignatura de Estructuras de Datos, se refrescan algunos conceptos vistos en la asignatura de Programación Avanzada en el lenguaje c++, los cuales se trataron de manejar de la mejor forma posible en base a lo que se recordaba, con una novedad que es: la compilación en terminal, en vez de en un IDE, como lo veníamos haciendo en semestres anteriores.
 
