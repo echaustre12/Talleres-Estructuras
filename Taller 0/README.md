@@ -28,7 +28,7 @@ Después de esto ya se pueden realizar las funciones del programa por medio del 
 
 ---
 
-### Plan de pruebas ✅ ❌ ⚠️
+### *Plan de pruebas* ✅ ❌ ⚠️
 
 - *init* ▶️
   
@@ -168,8 +168,85 @@ Después de esto ya se pueden realizar las funciones del programa por medio del 
 
 ---
 
-### Evidencia de depuración 🧪🐛
+### *Evidencia de depuración* 🧪🐛
 
+Con el fin de realizar la depuración del código a lo largo de su realización se utilizó GDB, el cual permite ejecutar distintos comandos que muestran la ejecución de las tareas del programa en un bajo nivel.
 
+Para utilizar el depurador es necesario compilar el código.
 
+```bash
+g++ -g -O0 main.cpp bitacora.cpp -o bitacora
+```
+
+Posteriormente se ejecuta: 
+
+```bash
+gdb ./bitacora
+  ```
+
+GDB ofrece la opcion de correr el programa con instrucciones especificas, con *run*:
+
+```bash
+run stats archivo.bd --k 3
+  ```
+
+En este caso, similar a la ejecucion con g++, también nos muestra el resultado de la operacion, aunque con otros datos de memoria: 
+
+```bash
+[New Thread 14912.0x90c]
+[New Thread 14912.0xe84]
+[New Thread 14912.0x226c]
+Stats Andorianas
+Registros disponibles: 5
+K solicitado: 3
+Promedio nivel andoriano (ultimos 3): 50.6667[Thread 14912.0x226c exited with code 0]
+[Thread 14912.0x90c exited with code 0]
+[Thread 14912.0xe84 exited with code 0]
+[Inferior 1 (process 14912) exited normally]
+```
+
+GDB también permite hacer pausas en funciones específicas con el comando *break*, el cual fue utilizado para debuggear el programa. Se hace un *break* en una función especifica: 
+
+```bash
+(gdb) break agregarRegistro
+```
+
+Luego, se corre el programa con instrucciones que involucren esa función, en este caso:
+
+```bash
+(gdb) run add bitacora.bd --nombre Esteban --emocion Feliz --felicidad 78 --energia 40 --sueno 8 --aguacate N
+```
+
+Se notifica que la ejecución se detuvo debido al *break* definido:
+
+```bash
+[New Thread 4728.0x2464]
+[New Thread 4728.0x440c]
+[New Thread 4728.0x3444]
+Thread 1 hit Breakpoint 1, 0x00007ff7af112bf9 in agregarRegistro(Registro*&, int&, Registro const&) ()
+```
+
+En este momento, podemos realizar la inspeccion del código de distintas maneras. La primera revisando que hat guardado en stack con el comando *backtrace*, recibiendo como salida en este caso:
+
+```bash
+#0  0x00007ff7af112bf9 in agregarRegistro(Registro*&, int&, Registro const&) ()
+#1  0x00007ff7af1117b6 in main ()
+```
+
+El backtrace muestra la secuencia de funciones activas en el momento en que el programa se detuvo. Indica que la ejecución está actualmente en agregarRegistro, la cual fue llamada previamente desde main. 
+
+Adicionalmente, se puede continuar la ejecución de manera manual utilizando el comando *step*, o imprimir el valor de una variable utilizando *print*, como se muestra en los ejemplos a continuación:
+
+```bash
+(gdb) print n
+$1 = (int &) @0x5ffd64: 2
+```
+
+```bash
+(gdb) print nuevo
+$2 = (const Registro &) @0x5ffcf0: {nombre = "Esteban", emocion = Feliz, felicidad = 78,
+  energia = 40, horas_sueno = 8, comio_aguacate = 0}
+```
+
+GDB es una herramienta fundamental para la depuración de código, ya que permite analizar la ejecución del programa paso a paso, inspeccionar el flujo de llamadas entre funciones y verificar el estado de las variables. Esto facilita la corrección de errores, brindando mayor control y comprensión sobre el comportamiento interno del programa durante su ejecución.
 
